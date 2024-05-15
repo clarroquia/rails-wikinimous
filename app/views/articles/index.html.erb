@@ -1,0 +1,14 @@
+<div class="container mt-3">
+  <div class="row d-flex">
+    <div class="col-sm-8 offset-sm-2">
+      <% @articles.each do |artcl| %>
+        <article class="mb-3">
+          <h2>
+            <%= link_to artcl.title, article_path(artcl) %>
+          </h2>
+          <p> <%= artcl.content %> </p>
+        </article>
+      <% end %>
+    </div>
+  </div>
+</div>
